@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100;0,300;1,200&family=Koulen&family=Kulim+Park:wght@200&family=Orbitron&display=swap');
+
+
+
+.blue-area {
+    height: 15em;
+    background-color: #00A2E1;
+    font-family: 'Epilogue', sans-serif;
+    color:white;
+    display: flex;
+}
+
+.newsletter {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 5em 7em;
+}
+
+.newsletter h3 {
+    margin-bottom: 1em;
+}
+
+.socialize {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 5em 7em;
+}
+
+.twitter {
+    display: flex;
+    width: 20em;
+}
+
+.black-area {
+    background-color: black;
+    color: white;
+    font-family: 'Epilogue', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    height: 5em;
+    padding: 2em 4em;
+}
+
+.about, .unilife {
+    display: flex;
+    
+}
+
+.about p, .unilife p {
+    margin-right: 1em;
+}

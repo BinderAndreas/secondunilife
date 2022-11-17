@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100;0,300;1,200&family=Koulen&family=Kulim+Park:wght@200&family=Orbitron&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.header-container {
+    height: 50px;
+    background-color: #00A2E1;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2em;
+    font-family: Epilogue, sans-serif;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    width: 4.5em;
+    justify-content: space-between;
+    font-size: larger;
+}
+
+.nav {
+    display: flex;
+    width: 15em;
+    justify-content: space-between;
+}
+
+.shortlist {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 5.2em;
+}
+
+.contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 7em;
+}
