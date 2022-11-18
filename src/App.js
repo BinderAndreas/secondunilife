@@ -2,6 +2,8 @@ import React,{useState} from 'react';
 import './App.css';
 import Header from './components/Header'
 import Footer from './components/Footer'
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import Homepage from './pages/Homepage';
 
 function App() {
 const [email,setEmail]=useState('')
@@ -13,13 +15,14 @@ const handleSubmit=(e)=>{
 }
 
   return (
-    <div>
+    <BrowserRouter>
        <Header />
-        <div className='body'>
-          
-        </div>
+        <Routes>
+          <Route path='/' element={<Homepage />}/>
+        
+        </Routes>
        <Footer />
-    </div>
+    </BrowserRouter>
   );
 }
 

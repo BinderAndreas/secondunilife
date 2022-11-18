@@ -1,0 +1,12 @@
+.overlay {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+    
+}
+
+.banner-title {
+    
+}
