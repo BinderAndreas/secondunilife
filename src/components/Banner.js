@@ -2,7 +2,7 @@ import React from 'react'
 import cover from '../assets/cover-img.png'
 import '../styles/banner.css'
 
-function Banner({title}) {
+function Banner({title, text}) {
 
 const bannerstyle = {
     height: '360px',
@@ -18,6 +18,7 @@ const bannerstyle = {
     <div style={bannerstyle}>
         <div className='overlay'></div>
         <h1 className='banner-title'>{title}</h1>
+        <p className='banner-text'>{text}</p>
     </div>
   )
 }
