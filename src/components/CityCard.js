@@ -28,6 +28,7 @@ const overlay = {
   backgroundColor: "rgba(0,0,0,0.5)",
   borderRadius: "24px",
   zIndex: "-1",
+  backdropFilter: "blur(2px)",
 }
 
 
@@ -35,7 +36,7 @@ const overlay = {
       <div style={cardstyle}>
         <div style={overlay}></div>
         <h1>{city.name}</h1>
-        <h2>{city.property_count}</h2>
+        <h2>{city.property_count} properties</h2>
       </div>
   )
 }

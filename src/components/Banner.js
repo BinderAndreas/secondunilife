@@ -12,6 +12,11 @@ const bannerstyle = {
     backgroundRepeat:'no-repeat',
     position: 'relative',
     zIndex: -2,
+    display:"flex",
+    flexDirection:"column",
+    justifyContent: "center",
+    alignItems: "center",
+    color: "white",
 }
 
   return (

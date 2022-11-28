@@ -1,10 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100;0,300;1,200&family=Koulen&family=Kulim+Park:wght@200&family=Orbitron&display=swap');
+
+* {
+    font-family: "Epilogue", sans-serif;
+}
+
 .homepage-container {
     min-height: 100vh;
 }
 
+.search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .citycard-container {
     display: flex;
+    
     flex-wrap: wrap;
     justify-content: center;
     padding: 10px;
+}
+
+.comparison {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 7em;
+    background: #F6FAFD;
+
+}
+
+.comparison-container {
+    display: flex;
+    justify-content: space-around;
+    width: 60em;
+    
+}
+
+.search, .compare, .bills {
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 15em;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+}
+
+.selection {
+    display: flex;
+    margin-bottom: 4em;
+    width: 500px;
+    align-items: space-between;
+   
+}
+
+.search-compare-container {
+    display: flex;
+    margin: 0 7em;
+    justify-content: space-around;
+    
+}
+
+.selection-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    align-items: space-between;
+}
+
+.citydetailspage a{
+    background-color: #3A5295;
+    text-decoration: none;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 8px 16px;
+    margin-top: 2em;
+}
+
+.icon-big {
+    font-size: 60px;
+}
+
+.icon-small {
+    font-size: 90px;
+}
+
+.city-search {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100px;
+    margin-bottom: 40px;
+    background-color: white;
+    filter: drop-shadow(0 0.2rem 0.25rem rgba(0, 0, 0, 0.2));
+    border-radius: 15px;
+}
+
+.city-search select {
+    width: 180px;
+    height: 40%;
+    border-radius: 15px;
+    border-color: rgb(163, 163, 163);
 }
