@@ -6,7 +6,7 @@ function header() {
   return (
     <div className="header-container">
       <div className="home">
-        <a href='../pages/homepage'><AiOutlineHome /></a>
+        <a href='/'><AiOutlineHome /></a>
         <p>UniLife</p>
       </div>
       <div className="nav">
