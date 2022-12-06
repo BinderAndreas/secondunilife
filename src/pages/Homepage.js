@@ -67,7 +67,7 @@ useEffect(() => {
                 })
               }
             </div>
-            <div className='allcities'><a href="/allcities">See all Cities</a></div>
+            <div className='allcities'><a href="/seeAllCitiesPage">See all Cities</a></div>
             
         </div>
         <div className='comparison'>
