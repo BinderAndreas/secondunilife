@@ -18,7 +18,7 @@ function SeeAllCitiesPage() {
       }, [])
 
   return (
-    <div className='try'>
+    <div>
         <Banner title='Student Accomodation' text='UniLife have student accommodation available across the UK.
             Whatever you’re after, we can help you find the right student accommodation for you. '/>
         <h1>Search by City</h1>

@@ -1,3 +1,13 @@
-.try {
-    height: 400px;
+.city-button {
+    width: 40px;
+    font-weight: 600;
+    font-size: 28px;
+    background: #FFFFFF;
+    border: 1px solid #CED3D8;
+    border-radius: 24px;
+}
+
+.city-container {
+    display: flex;
+    flex-wrap: wrap;
 }
