@@ -108,7 +108,7 @@ useEffect(() => {
                 <p>Shortlist your favourite properties and send enquiries in one click.</p>
               </div>
             </div>
-          <div className='citydetailspage'><a href="/CityDetailsPage">Search & Compare</a></div>
+          <div className='citydetailspage'><a href="/citydetails">Search & Compare</a></div>
           </div>
           <img src={person}/>
 

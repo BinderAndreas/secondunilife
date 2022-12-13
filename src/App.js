@@ -22,7 +22,7 @@ const handleSubmit=(e)=>{
         <Routes>
           <Route path='/' element={<Homepage />}/>
           <Route path='/seeallcities' element={<SeeAllCitiesPage />}/>
-          <Route path='/CityDetails' element={<CityDetailsPage />}/>
+          <Route path='/citydetails' element={<CityDetailsPage />}/>
         </Routes>
        <Footer />
     </BrowserRouter>
