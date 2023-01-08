@@ -6,15 +6,10 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Homepage from './pages/Homepage';
 import SeeAllCitiesPage from './pages/SeeAllCitiesPage';
 import CityDetailsPage from './pages/CityDetailsPage';
+import HomeDetailsPage from './pages/HomeDetailsPage';
 
 function App() {
-const [email,setEmail]=useState('')
 
-
-const handleSubmit=(e)=>{
-  e.preventDefault()
-  console.log(email)
-}
 
   return (
     <BrowserRouter>
@@ -23,6 +18,7 @@ const handleSubmit=(e)=>{
           <Route path='/' element={<Homepage />}/>
           <Route path='/seeallcities' element={<SeeAllCitiesPage />}/>
           <Route path='/citydetails' element={<CityDetailsPage />}/>
+          <Route path='/homedetails' element={<HomeDetailsPage />}/>
         </Routes>
        <Footer />
     </BrowserRouter>

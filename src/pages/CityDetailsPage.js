@@ -5,16 +5,16 @@ import AccomodationCard from '../components/AccomodationCard'
 import axios from 'axios'
 import students from "../assets/students.png";
 
-function CityDetailsPage(pic, costs, place) {
+function CityDetailsPage() {
 
-  const [allCities,setAllCities]=useState([])
+  const [properties,setAllProperties]=useState([])
 
   useEffect(() => {
          
-      axios.get(`https://unilife-server.herokuapp.com/cities?limit=20`)
+      axios.get(`https://unilife-server.herokuapp.com/properties?limit=6`)
       .then(res=>{
-        console.log(res?.data?.response)
-        setAllCities(res?.data?.response)
+        console?.log(res?.data?.results)
+        setAllProperties(res?.data?.results)
       })
       .catch(err=>console.log(err))
     }, [])
@@ -83,12 +83,12 @@ function CityDetailsPage(pic, costs, place) {
     </div>
     <h1> 6 homes in Leeds</h1>
     <div className='accomodations-container'>
-      <AccomodationCard pic={allCities[0]?.image_url} costs="110" place={allCities.name}/>
-      <AccomodationCard pic={allCities[1]?.image_url} costs="110" place={allCities.name}/>
-      <AccomodationCard pic={allCities[2]?.image_url} costs="110" place={allCities.name}/>
-      <AccomodationCard pic={allCities[3]?.image_url} costs="110" place={allCities.name}/>
-      <AccomodationCard pic={allCities[4]?.image_url} costs="110" place={allCities.name}/>
-      <AccomodationCard pic={allCities[5]?.image_url} costs="110" place={allCities.name}/>
+      {
+        properties?.map((property)=>{
+          return <AccomodationCard key={property?.city?.city_id} property={property}/>
+        })
+      }
+      
     </div>
     <div className='student-container'>
       <div className='student-container-text'>

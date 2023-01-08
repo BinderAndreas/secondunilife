@@ -40,17 +40,21 @@
     display: flex;
     justify-content: center;
     background-color: #F6FAFD;
+    
 }
 .student-container img {
     border-radius: 20px;
     height: 300px;
+
 }
 
 .student-container-text {
     margin: 40px;
     width: 30%;
+ 
 }
 
 .student-container-text p {
     margin-top: 20px;
+    line-height: 32px;
 }
