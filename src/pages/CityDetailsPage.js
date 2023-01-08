@@ -1,9 +1,25 @@
-import React from 'react'
+import React,{useEffect,useState} from 'react'
 import Banner from '../components/Banner'
 import '../styles/citydetailspage.css'
 import AccomodationCard from '../components/AccomodationCard'
+import axios from 'axios'
+import students from "../assets/students.png";
 
-function CityDetailsPage(city) {
+function CityDetailsPage(pic, costs, place) {
+
+  const [allCities,setAllCities]=useState([])
+
+  useEffect(() => {
+         
+      axios.get(`https://unilife-server.herokuapp.com/cities?limit=20`)
+      .then(res=>{
+        console.log(res?.data?.response)
+        setAllCities(res?.data?.response)
+      })
+      .catch(err=>console.log(err))
+    }, [])
+
+
   return (
     <div>
         <Banner title="Search Accomodation" text="Whatever you`re after, we can help you find the right student accommodation for you."/>
@@ -65,9 +81,23 @@ function CityDetailsPage(city) {
           </div>
         </div>
     </div>
+    <h1> 6 homes in Leeds</h1>
     <div className='accomodations-container'>
-      <h1> homes in {city.name}</h1>
-      <AccomodationCard />
+      <AccomodationCard pic={allCities[0]?.image_url} costs="110" place={allCities.name}/>
+      <AccomodationCard pic={allCities[1]?.image_url} costs="110" place={allCities.name}/>
+      <AccomodationCard pic={allCities[2]?.image_url} costs="110" place={allCities.name}/>
+      <AccomodationCard pic={allCities[3]?.image_url} costs="110" place={allCities.name}/>
+      <AccomodationCard pic={allCities[4]?.image_url} costs="110" place={allCities.name}/>
+      <AccomodationCard pic={allCities[5]?.image_url} costs="110" place={allCities.name}/>
+    </div>
+    <div className='student-container'>
+      <div className='student-container-text'>
+        <h1>Being a student in Leeds</h1>
+        <p>Leeds is a lively and multicultural city with a large student population. It is quite a compact city, so it is easy to get around and has a community feel. Leeds is the perfect mix of city and town life and has something to offer to anyone who calls it home.<br/><br/>
+
+Leeds is home to three universities, the University of Leeds, Leeds Trinity University and Leeds Beckett University</p>
+        </div>
+      <img src={students}/>
     </div>
     </div>
   )

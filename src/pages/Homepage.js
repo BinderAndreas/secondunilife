@@ -13,7 +13,7 @@ import person from "../assets/person.png";
 
 import axios from 'axios'
 
-function Homepage() {
+function Homepage(city) {
 
   const [topCities,setTopCities]=useState([])
   const [allCities,setAllCities]=useState([])
