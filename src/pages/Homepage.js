@@ -8,6 +8,7 @@ import { RiBillLine } from "react-icons/ri";
 import { GrSelect } from "react-icons/gr";
 import { BsHeart } from "react-icons/bs";
 import person from "../assets/person.png";
+import CityDetailsPage from './CityDetailsPage';
 
 
 
@@ -57,7 +58,7 @@ useEffect(() => {
                     })
                   }
                 </select>
-                <div className='citydetailspage'><a href="/CityDetailsPage">Find Homes</a></div>
+                <div className='citydetailspage'><a href="/citydetails">Find Homes</a></div>
             </div>
             <h1>Student accommodations in our top cities</h1>
             <div className='citycard-container'>

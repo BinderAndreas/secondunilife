@@ -11,10 +11,11 @@ function CityDetailsPage() {
 
   useEffect(() => {
          
-      axios.get(`https://unilife-server.herokuapp.com/properties?limit=6`)
+      axios.get(`https://unilife-server.herokuapp.com/properties`)
       .then(res=>{
-        console?.log(res?.data?.results)
-        setAllProperties(res?.data?.results)
+        console.log(res?.data?.response)
+        setAllProperties(res?.data?.response)
+        console.log(properties)
       })
       .catch(err=>console.log(err))
     }, [])

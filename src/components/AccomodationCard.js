@@ -3,7 +3,7 @@ import axios from 'axios'
 import CityCard from './CityCard'
 import '../styles/accomodationcard.css'
 import { MdSingleBed, MdOutlineBathtub, MdOutlineHome, MdOutlineLocationOn } from 'react-icons/md';
-import HomeDetailsPage from '../pages/HomeDetailsPage';
+
 
 
 function AccomodationCard({property}) {
@@ -12,8 +12,8 @@ function AccomodationCard({property}) {
   return (
     <div className='homes-container'>
         <div className='home-box'>
-          <p>{property.city_id}</p>
-          <img src={property?.images[0]} alt="Alternativtext"/>
+          <p>{property?.city?.city_id}</p>
+          <img src={property?.city?.images[0]} alt="Alternativtext"/>
           <div classname="blue-details-area">
             <div className='blue-area-costs'>
               <h3>€110</h3>
@@ -33,7 +33,7 @@ function AccomodationCard({property}) {
             <p>Heald Place Street, Rusholme, M14 4PF</p>
           </div>
           <MdOutlineHome />
-          <div className='homedetailspage'><a href="/HomeDetailsPage">Find Homes</a></div>
+          <div className='homedetailspage'><a href="/HomeDetailsPage">View Home</a></div>
         </div>
     </div>
   )
