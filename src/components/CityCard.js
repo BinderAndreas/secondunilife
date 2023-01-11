@@ -1,8 +1,12 @@
 import React from "react"
+import CityDetailsPage from "../pages/CityDetailsPage"
+
+
 
 
 function CityCard({city}) {
 
+  
 const cardstyle = {
     backgroundImage:`url('${city.image_url}')`, 
     backgroundRepeat: "no-repeat", 

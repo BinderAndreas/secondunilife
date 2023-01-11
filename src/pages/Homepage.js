@@ -19,6 +19,7 @@ function Homepage() {
   const [topCities,setTopCities]=useState([])
   const [allCities,setAllCities]=useState([])
   const bedNumbers = [1,2,3,4,5,6,7,8,9,10];
+  const [cityId, setCityId]=useState("")
 
 useEffect(() => {
   axios.get(`https://unilife-server.herokuapp.com/cities?limit=9`)
@@ -36,17 +37,21 @@ useEffect(() => {
   .catch(err=>console.log(err))
 }, [])
 
+const selectCity=(value)=>{
+setCityId(value)
+}
+
 
   return (
     <div className='homepage-container'>
         <Banner title='Find student homes with bills included' text='A simple and faster way to search for student accomodation'/>
-        <div className='search-container'>
+        <div className='home-search-container'>
             <div className='city-search'>
               <label for="city-search"></label>
-                <select name="city-search" id="city-search" placeholder="Search by city">
+                <select onChange={(e)=>setCityId(e.target.value)} name="city-search" id="city-search" placeholder="Search by city">
                   {
                     allCities?.map((city)=> {
-                      return <option value={city.name} key={city._id}>{city.name}</option>
+                      return <option value={city._id} key={city._id}>{city.name}</option>
                     })
                   }
                 </select>
@@ -58,7 +63,7 @@ useEffect(() => {
                     })
                   }
                 </select>
-                <div className='citydetailspage'><a href="/citydetails">Find Homes</a></div>
+                <div className='citydetailspage'><a href={`/citydetails/${cityId}`}>Find Homes</a></div>
             </div>
             <h1>Student accommodations in our top cities</h1>
             <div className='citycard-container'>

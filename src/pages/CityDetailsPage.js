@@ -4,14 +4,17 @@ import '../styles/citydetailspage.css'
 import AccomodationCard from '../components/AccomodationCard'
 import axios from 'axios'
 import students from "../assets/students.png";
+import { useParams } from 'react-router-dom'
 
 function CityDetailsPage() {
+
+  const{cityId}=useParams()
 
   const [properties,setAllProperties]=useState([])
 
   useEffect(() => {
          
-      axios.get(`https://unilife-server.herokuapp.com/properties`)
+      axios.get(`https://unilife-server.herokuapp.com/properties/city/${cityId}`)
       .then(res=>{
         console.log(res?.data?.response)
         setAllProperties(res?.data?.response)

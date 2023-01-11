@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React from 'react';
 import './App.css';
 import Header from './components/Header'
 import Footer from './components/Footer'
@@ -17,7 +17,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Homepage />}/>
           <Route path='/seeallcities' element={<SeeAllCitiesPage />}/>
-          <Route path='/citydetails' element={<CityDetailsPage />}/>
+          <Route path='/citydetails/:cityId' element={<CityDetailsPage />}/>
           <Route path='/homedetails/:id' element={<HomeDetailsPage />}/>
         </Routes>
        <Footer />

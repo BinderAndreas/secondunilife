@@ -12,28 +12,28 @@ function AccomodationCard({property}) {
   return (
     <div className='homes-container'>
         <div className='home-box'>
-          <p>{property?.city?.city_id}</p>
-          <img src={property?.city?.images[0]} alt="Alternativtext"/>
+          <p>{property?.city_id}</p>
+          <img src={property?.images[0]} alt="Alternativtext"/>
           <div classname="blue-details-area">
             <div className='blue-area-costs'>
               <h3>€110</h3>
               <p>pppw including bills</p>
             </div>
             <MdSingleBed />
-            <p>5</p>
+            <p>{property?.bedroom_count}</p>
             <MdOutlineBathtub />
-            <p>2</p>
+            <p>{property?.bathroom_count}</p>
           </div>
           <div className='white-area'>
             <div className='white-area-above'>
-              <h4>Detached</h4>
-              <h4>Fully Furnished</h4>
+              <h4>{property?.property_type}</h4>
+              <h4>{property?.furnished}</h4>
             </div>
             <MdOutlineLocationOn />
-            <p>Heald Place Street, Rusholme, M14 4PF</p>
+            <p>Address</p>
           </div>
           <MdOutlineHome />
-          <div className='homedetailspage'><a href="/HomeDetailsPage">View Home</a></div>
+          <div className='homedetailspage'><a href={`/homedetails/${property._id}`}>View Home</a></div>
         </div>
     </div>
   )

@@ -1,4 +1,6 @@
-
+.blue-area-costs {
+    display: flex;
+}
 
 .blue-details-area {
     display: flex;
