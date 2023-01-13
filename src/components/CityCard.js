@@ -4,7 +4,7 @@ import CityDetailsPage from "../pages/CityDetailsPage"
 
 
 
-function CityCard({city}) {
+function CityCard({city, key}) {
 
   
 const cardstyle = {
@@ -39,7 +39,8 @@ const overlay = {
   return (
       <div style={cardstyle}>
         <div style={overlay}></div>
-        <h1>{city.name}</h1>
+        <h1><a href={`/citydetails/${key}`}>{city.name}</a></h1>
+        {console.log(key)}
         <h2>{city.property_count} properties</h2>
       </div>
   )
