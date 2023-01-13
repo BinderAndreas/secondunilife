@@ -17,7 +17,7 @@ function AccomodationCard({property}) {
         <div className='home-box'>
           <p>{property?.city_id}</p>
           <img src={property?.images[0]} alt="Alternativtext"/>
-          <div classname="blue-details-area">
+          <div className="blue-details-area">
             <div className='blue-area-costs'>
               <h3>€110</h3>
               <p>pppw including bills</p>

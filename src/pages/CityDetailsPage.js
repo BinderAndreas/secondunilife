@@ -6,11 +6,15 @@ import axios from 'axios'
 import students from "../assets/students.png";
 import { useParams } from 'react-router-dom'
 
-function CityDetailsPage({value}) {
+function CityDetailsPage() {
 
   const{cityId}=useParams()
 
   const [properties,setAllProperties]=useState([])
+  const [cityName, setCityName]=useState("")
+  const [propertyCount, setPropertyCount]=useState("")
+  const [studentLife, setStudentLife]=useState("")
+  const [universities, setUniversities]=useState("")
 
   useEffect(() => {
          
@@ -18,7 +22,20 @@ function CityDetailsPage({value}) {
       .then(res=>{
         console.log(res?.data?.response)
         setAllProperties(res?.data?.response)
-        console.log(properties)
+        setCityName(res?.data?.city_name)
+        setPropertyCount(res?.data?.total)
+        console.log(res.data)
+      })
+      .catch(err=>console.log(err))
+    }, [])
+
+    useEffect(() => {
+         
+      axios.get(`https://unilife-server.herokuapp.com/cities/${cityId}`)
+      .then(res=>{
+        console.log(res?.data?.data[0])
+        setStudentLife(res?.data?.data[0].student_life)
+        setUniversities(res?.data?.data[0].universities)
       })
       .catch(err=>console.log(err))
     }, [])
@@ -85,7 +102,7 @@ function CityDetailsPage({value}) {
           </div>
         </div>
     </div>
-    <h1> 6 homes in </h1>
+    <h1> {propertyCount} homes in {cityName} </h1>
     <div className='accomodations-container'>
       {
         properties?.map((property)=>{
@@ -96,10 +113,9 @@ function CityDetailsPage({value}) {
     </div>
     <div className='student-container'>
       <div className='student-container-text'>
-        <h1>Being a student in </h1>
-        <p>Leeds is a lively and multicultural city with a large student population. It is quite a compact city, so it is easy to get around and has a community feel. Leeds is the perfect mix of city and town life and has something to offer to anyone who calls it home.<br/><br/>
-
-Leeds is home to three universities, the University of Leeds, Leeds Trinity University and Leeds Beckett University</p>
+        <h1>Being a student in {cityName}</h1>
+        <p>{studentLife}<br/><br/>
+            {universities}</p>
         </div>
       <img src={students}/>
     </div>

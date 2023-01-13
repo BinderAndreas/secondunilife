@@ -22,7 +22,7 @@ const cardstyle = {
     alignItems: "center",
     flexDirection: "column",
     position: "relative",
-    zIndex: "-2"
+    zIndex: "0"
 }
 
 const overlay = {
@@ -31,7 +31,7 @@ const overlay = {
   height: "300px",
   backgroundColor: "rgba(0,0,0,0.5)",
   borderRadius: "24px",
-  zIndex: "-1",
+  zIndex: "-2",
   backdropFilter: "blur(2px)",
 }
 
@@ -39,7 +39,7 @@ const overlay = {
   return (
       <div style={cardstyle}>
         <div style={overlay}></div>
-        <h1><a href={`/citydetails/${key}`}>{city.name}</a></h1>
+        <h1><a href="asd">{city.name}</a></h1>
         {console.log(key)}
         <h2>{city.property_count} properties</h2>
       </div>

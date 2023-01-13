@@ -26,7 +26,7 @@ function SeeAllCitiesPage() {
         <div className='city-container'>
               {
                 allCities?.map((city)=>{
-                  return <button className='city-button' key={city?._id} city={city}>{city?.name}</button>
+                  return <button className='city-button' key={city?._id} city={city}><a href={`/citydetails/${city._id}`}>{city?.name}</a></button>
                 })
               }
             </div>
