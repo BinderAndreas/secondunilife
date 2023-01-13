@@ -6,7 +6,7 @@ import axios from 'axios'
 import students from "../assets/students.png";
 import { useParams } from 'react-router-dom'
 
-function CityDetailsPage() {
+function CityDetailsPage({value}) {
 
   const{cityId}=useParams()
 
@@ -85,7 +85,7 @@ function CityDetailsPage() {
           </div>
         </div>
     </div>
-    <h1> 6 homes in Leeds</h1>
+    <h1> 6 homes in </h1>
     <div className='accomodations-container'>
       {
         properties?.map((property)=>{
@@ -96,7 +96,7 @@ function CityDetailsPage() {
     </div>
     <div className='student-container'>
       <div className='student-container-text'>
-        <h1>Being a student in Leeds</h1>
+        <h1>Being a student in </h1>
         <p>Leeds is a lively and multicultural city with a large student population. It is quite a compact city, so it is easy to get around and has a community feel. Leeds is the perfect mix of city and town life and has something to offer to anyone who calls it home.<br/><br/>
 
 Leeds is home to three universities, the University of Leeds, Leeds Trinity University and Leeds Beckett University</p>
